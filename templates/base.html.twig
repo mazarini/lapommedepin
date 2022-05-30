@@ -1,19 +1,46 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
+
     <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
-        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+
+        <meta charset='utf-8'>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <title>
+            {% block head_title %}
+                La Pomme de Pin
+            {% endblock %}
+        </title>
+
+        <link rel="icon" sizes="192x192" href="/favico.ico">
+        <link rel="shortcut icon" href="/favico.ico" type="image/x-icon"/>
+        <link rel="apple-touch-icon" href="/favico.ico" type="image/x-icon"/>
+        <link rel="canonical" href="index.html"/>
+
+        <meta name="description" content="présentation de la brasserie et du restaurant la Pomme de Pin dans le cadre historique de la vieille ville de Lausanne"/>
+        <meta property="og:title" content="Café restaurant la Pomme de Pin"/>
+        <meta property="og:description" content="présentation de la brasserie et du restaurant la Pomme de Pin dans le cadre historique de la vieille ville de Lausanne"/>
+        <meta property="og:url" content="https://www.lapommedepin.ch"/>
+        <meta property="og:site_name" content="la-pomme-01"/>
+        <meta property="og:type" content="website"/>
+        <meta name="keywords" content="brasserie, caf&amp;eacute;, centre, gastronomique, historique, lausanne, restaurant, vieille, ville"/>
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:title" content="Café restaurant la Pomme de Pin"/>
+        <meta name="twitter:description" content="présentation de la brasserie et du restaurant la Pomme de Pin dans le cadre historique de la vieille ville de Lausanne"/>
+        <meta name="format-detection" content="telephone=no">
+        <meta name="skype_toolbar" content="skype_toolbar_parser_compatible">
+
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
-        {% endblock %}
+        {% endblock stylesheets %}
 
+    </head>
+
+    <body>
+        {% block body %}{% endblock %}
         {% block javascripts %}
             {{ encore_entry_script_tags('app') }}
         {% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
     </body>
 </html>
